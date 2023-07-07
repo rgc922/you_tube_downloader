@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<title>Upload file</title>
+<h1>Insert your YouTube Link</h1>
+
+<form method="POST" enctype="application/x-www-form-urlencoded">
+    <label>Enter the URL:</label>
+    <input type=text name="url_link" required style="WIDTH:400px">
+    <input type=submit value="Download">
+
+</form>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
